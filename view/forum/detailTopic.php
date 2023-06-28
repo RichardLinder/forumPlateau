@@ -9,11 +9,12 @@ $topic = $result["data"]['topic'];
 
 <?php
 
-die (var_dump($topic));
-foreach($topic as $detail ){
+if($topic  ){
 
     ?>
    
-<p><?=$detail->getTitle()?></p>
+<p><?=$topic->getTitle()?></p>
+<p><?=$topic->getId()?></p>
+<p><?=$topic->getUser()->getPseudo()?></p>
     <?php
 }

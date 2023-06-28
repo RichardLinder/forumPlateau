@@ -24,7 +24,7 @@
                 ]
             ];
         }
-            function listCategories() 
+            public function listCategories() 
             {
                 $categoryManager= new CategoryManager;
                 
@@ -38,13 +38,28 @@
                 
             }
 
-            function detailTopic($id)  
+            public function detailTopic($id)  
             {
-                $topicManager = new TopicManager($id);
+                $topicManager = new TopicManager();
                 return [
                     "view" => VIEW_DIR."forum/detailTopic.php",
                     "data" => [
                         "topic" => $topicManager->findOneById($id)
+                        
+                    ]
+                ];
+
+               
+                
+            }
+
+            public function detailCategory($id)  
+            {
+                $CategoryManager = new CategoryManager();
+                return [
+                    "view" => VIEW_DIR."forum/detailCategory.php",
+                    "data" => [
+                        "category" => $CategoryManager->findOneById($id)
                         
                     ]
                 ];

@@ -7,13 +7,16 @@
 
         private int $id;
         private string $title;
-        private user $user;
+        private User $user;
         private $creationdate;
         // private bool $closed;
 
         public function __construct($data){         
-            $this->hydrate($data);        
+            $this->hydrate($data);
+            
+                
         }
+
  
         /**
          * Get the value of id

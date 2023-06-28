@@ -52,4 +52,5 @@ namespace Model\Entities;
 
                 return $this;
         }
+        
     }

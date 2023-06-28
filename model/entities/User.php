@@ -10,6 +10,12 @@
         private string $password;
         private $registrationDate;
         private string $role;
+        
+
+
+        public function __construct($data){         
+                $this->hydrate($data);        
+            }
 
 
         /**
@@ -111,5 +117,7 @@
 
                 return $this;
         }
+        public function __toString()
+        {return "testa";} 
     }
     

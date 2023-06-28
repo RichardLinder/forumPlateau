@@ -9,11 +9,9 @@
 
         protected $className = "Model\Entities\Topic";
         protected $tableName = "topic";
-        protected $id ="id";
 
 
         public function __construct(){
-            $this->id =$id;
             parent::connect();
         }
 
