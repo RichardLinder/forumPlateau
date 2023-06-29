@@ -1,3 +1,10 @@
+<?php
+/*
+template des page 
+
+ plusieur zone php on été ajouté notament des call a des fonction de securité qui seron utilisé pour restreundre les acès et/ou controlé les action possible 
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,4 +1,6 @@
 <?php
+
+// chaqu'un des fichier de la classe manageur on pour vocation de donné au entité les méthode de manager 
     namespace Model\Managers;
     
     use App\Manager;

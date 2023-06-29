@@ -1,5 +1,14 @@
 <?php
+
+
+// Fichie de routage ou les requete sont intercepté 
+
+
+
     namespace App;
+
+
+    // création de différente constante utilisé dans tout le site  elle serviron a indiqué des valeur par défaut ou a simplifier l'ecriture
 
     define('DS', DIRECTORY_SEPARATOR); // le caractère séparateur de dossier (/ ou \)
     // meilleure portabilité sur les différents systêmes.
@@ -21,6 +30,14 @@
     use App\Session as Session;
 
 //---------REQUETE HTTP INTERCEPTEE-----------
+
+// section ou l'on recupre le get et ou l'on annalyse pour repontre au besoin utilisateur
+
+// probablement besoin de ajouté une section de fitre a cette endroit
+
+
+
+
     $ctrlname = DEFAULT_CTRL;//on prend le controller par défaut
     //ex : index.php?ctrl=home
     if(isset($_GET['ctrl'])){
@@ -52,6 +69,8 @@
 
     
     /*--------CHARGEMENT PAGE--------*/
+
+    //  a voir plus tard
     
     if($action == "ajax"){//si l'action était ajax
         echo $result;//on affiche directement le return du contrôleur (càd la réponse HTTP sera uniquement celle-ci)
