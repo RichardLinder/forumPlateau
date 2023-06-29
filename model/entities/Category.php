@@ -1,4 +1,7 @@
 <?php
+
+// c'est l'endroit ou l'on crée les entité : en gros l'object comparable a une colone de la base de donné
+// il comprend des  atriput chaqu'un corespondant a une ligne de la bd et des getter  ( et des setter mais je ne suis pas encore sur de commment il seron géréer)
 namespace Model\Entities;
 
     use App\Entity;
