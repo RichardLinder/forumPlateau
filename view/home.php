@@ -1,5 +1,7 @@
 <?php
 // Page d'accuile du site
+$categories = $result["data"]['categories'];
+// $topics = $result["data"]['topics'];
 
 ?>
 
@@ -12,3 +14,31 @@
     <span>&nbsp;-&nbsp;</span>
     <a href="/security/register.html">S'inscrire</a>
 </p>
+
+
+<h2>
+    les categorie
+</h2>
+
+
+ 
+
+
+<h1>liste categorier</h1>
+
+<?php
+foreach($categories as $category ){
+
+    ?>
+    <a href="index.php?ctrl=forum&action=detailCategory&id=<?=$category->getId()?>"> <p><?=$category->getWording()?></p></a>
+
+    <?php
+    while ($a <= 2) {
+
+        
+    }
+}
+
+
+
+

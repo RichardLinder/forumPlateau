@@ -1,7 +1,7 @@
 <?php
 
 $categories = $result["data"]['categories'];
-    
+ 
 ?>
 
 <h1>liste categorier</h1>

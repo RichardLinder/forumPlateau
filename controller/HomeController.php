@@ -9,14 +9,23 @@
     use Model\Managers\UserManager;
     use Model\Managers\TopicManager;
     use Model\Managers\PostManager;
+    use Model\Managers\CategoryManager;
+    
     
     class HomeController extends AbstractController implements ControllerInterface{
 
         public function index(){
+
+            $categoryManager = new CategoryManager();
+            $topicManager = new TopicManager();
             
            
                 return [
-                    "view" => VIEW_DIR."home.php"
+                    "view" => VIEW_DIR."home.php",
+                    "data" => [
+                        "categories" => $categoryManager->findAll()
+                        
+                    ]
                 ];
             }
             
