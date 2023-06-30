@@ -1,5 +1,11 @@
 <?php
 
+/*
+controler qui gére la partie forum du site elle comprendr une function index qui apel topic MAIS 
+je ne suis pas sur que cette fonction qui es celle par defaut sera celle que je garderais a la fin 
+chaqu'un des fonction apel un manager d'entity et une vue afin de repondre au besoin utilisateur 
+*/
+
     namespace Controller;
 
     use App\Session;
