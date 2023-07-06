@@ -23,7 +23,8 @@
                 return [
                     "view" => VIEW_DIR."home.php",
                     "data" => [
-                        "categories" => $categoryManager->findAll()
+                        "categories" => $categoryManager->findAll(),
+                        "rows" => 2
                         
                     ]
                 ];

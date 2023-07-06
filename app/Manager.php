@@ -105,5 +105,25 @@
             }
             return false;
         }
+
+        public function findListByIdDep($idDep, $tableDep, $order = null){
+
+            $orderQuery = ($order) ?                 
+                "ORDER BY ".$order[0]. " ".$order[1] :
+                "";
+
+            $sql = "SELECT *
+                    FROM ".$this->tableName."
+                    WHERE ".$tableDep."_id = :id 
+                    ".$orderQuery;
+
+            return $this->getMultipleResults(
+                DAO::select($sql, ['id' => $idDep]), 
+                $this->className
+            );
+        }
+
     
+
+        
     }

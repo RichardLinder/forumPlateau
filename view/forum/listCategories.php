@@ -10,7 +10,23 @@ $categories = $result["data"]['categories'];
 foreach($categories as $category ){
 
     ?>
-   
-    <a href="index.php?ctrl=forum&action=detailCategory&id=<?=$category->getId()?>"> <p><?=$category->getWording()?></p></a>
-    <?php
+   <div>
+
+       <span>
+           <a href="index.php?ctrl=forum&action=detailCategory&id=<?=$category->getId()?>"> <p><?=$category->getWording()?></p></a>
+           
+        </span> 
+        <span>
+            <a href="index.php?ctrl=forum&action=delletCategory&id=<?=$category->getId()?>">supprimer</a>
+        </span>
+        </div>
+        <?php
 }
+
+?>
+<form action="index.php?ctrl=forum&action=addCategory" method="post">
+ <input  name="wording"  type="text"  placeholder="nouveaugenre">
+<button type="submit">
+    cliker vite 
+</button>
+</form>
