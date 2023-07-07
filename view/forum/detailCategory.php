@@ -1,5 +1,5 @@
 <?php
-
+// on stock  les category et les topic recupéré de ma base de donné
 $category = $result["data"]['category'];
 $topics = $result["data"]['topics'];
 
@@ -17,14 +17,21 @@ if($category  ){
 <p><?=$category->getWording()?></p>
 
 <?php
-foreach($topics as $topic ){
-
-    ?>
+if (isset($topics)&&$topics!=null) 
+{
    
-    <a href="index.php?ctrl=forum&action=detailTopic&id=<?=$topic->getId()?>"> <p><?=$topic->getTitle()?></p></a>
+    foreach($topics as $topic ){
     
-
-    <?php
+        ?>
+       
+        <a href="index.php?ctrl=forum&action=detailTopic&id=<?=$topic->getId()?>"> <p><?=$topic->getTitle()?></p></a>
+        
+    
+        <?php
+    }
+}else 
+{
+    echo " Le sujet n'a pas encore discution ";    
 }
 }
 

@@ -8,7 +8,7 @@
     {
         private int $id;
         private $datePost;
-        private string $text;
+        private  $text;
         private User $user;
         private Topic $topic ;
 
