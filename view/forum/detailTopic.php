@@ -3,6 +3,7 @@
 
 $topic = $result["data"]['topic'];
 $posts = $result["data"]['posts'];
+$test = $result["data"]['test'];
     
 ?>
 
@@ -13,18 +14,19 @@ $posts = $result["data"]['posts'];
 if($topic  )
 {
 
+
     ?>
-   
-    <p><?=$topic->getTitle()?></p>
     <p><?=$topic->getId()?></p>
-    <p><?=$topic->getUser()->getPseudo()?></p>
+
     <?php
     foreach ($posts as $post)
     {
+        var_dump($post);
         ?>
-        <P><?=$post->getText()?></P>
-        <p></p>
-        <p></p>
+        <h3><?=$topic->getTitle()?></h3>
+
+        <p> Crée par <p><?=$topic->getUser()->getPseudo()?></p>
+        <P> blabla <?=$post->getText()?> blabla</P>
         <?php
     }
 
