@@ -19,14 +19,14 @@ $rows=  $result["data"]['rows'];
 
 
 <h2>
-    les categorie
+    les catégories
 </h2>
 
 
  
 
 
-<h1>liste categorier</h1>
+<h1>liste de  catégories </h1>
 
 <?php
 

@@ -8,12 +8,14 @@
     {
         private int $id;
         private $datePost;
-        private  $text;
+        private string $text;
         private User $user;
         private Topic $topic ;
 
 
-
+        public function __construct($data){         
+                $this->hydrate($data);        
+            }
 
         
 

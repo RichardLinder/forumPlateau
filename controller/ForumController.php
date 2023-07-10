@@ -58,6 +58,7 @@ use Model\Managers\TopicManager;
                     "view" => VIEW_DIR."forum/detailTopic.php",
                     "data" => 
                     [
+
                         "topic" => $topicManager->findOneById($id),
                         "posts" => $postManager->findListByIdDep($id, "topic")
 
@@ -102,7 +103,6 @@ use Model\Managers\TopicManager;
 
         function delletCategory($id)
         {
-            die(var_dump($_POST));
             $CategoryManager = new CategoryManager();
 
           $CategoryManager->delete($id);
