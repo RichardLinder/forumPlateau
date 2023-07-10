@@ -25,7 +25,7 @@ foreach($categories as $category ){
 
 ?>
 <form action="index.php?ctrl=forum&action=addCategory" method="post">
- <input  name="wording"  type="text"  placeholder="nouveaugenre">
+ <input  name="wording"  type="text"  placeholder="nouveau ropic">
 <button type="submit">
     cliker vite 
 </button>

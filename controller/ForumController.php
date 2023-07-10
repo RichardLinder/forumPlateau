@@ -102,6 +102,7 @@ use Model\Managers\TopicManager;
 
         function delletCategory($id)
         {
+            die(var_dump($_POST));
             $CategoryManager = new CategoryManager();
 
           $CategoryManager->delete($id);
@@ -109,16 +110,15 @@ use Model\Managers\TopicManager;
           $this->listCategories();
         }
 
-        function addTopic($ad)
+        function addTopic()
         {
             $title = filter_input (INPUT_POST, "title", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $category_id = filter_input (INPUT_POST, "category_id", FILTER_SANITIZE_NUMBER_INT);
             $user_id = filter_input (INPUT_POST, "user_id", FILTER_SANITIZE_NUMBER_INT);
-            $id =$category_id;
 
 
             date_default_timezone_set('europe/Paris');
-           $date= date('Y-m-d H:i:s');
+            $date= date('Y-m-d H:i:s');
 
           
 
@@ -133,7 +133,7 @@ use Model\Managers\TopicManager;
             $topicManager->add($data);
 
             return 
-                $this->detailCategory($id);
+                $this->detailCategory($category_id);
             
         }
     }
