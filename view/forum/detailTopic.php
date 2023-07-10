@@ -3,7 +3,6 @@
 
 $topic = $result["data"]['topic'];
 $posts = $result["data"]['posts'];
-$test = $result["data"]['test'];
     
 ?>
 
@@ -21,7 +20,7 @@ if($topic  )
     <?php
     foreach ($posts as $post)
     {
-        var_dump($post);
+        var_dump($post->getText());
         ?>
         <h3><?=$topic->getTitle()?></h3>
 
