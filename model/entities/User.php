@@ -9,7 +9,7 @@
         private string $pseudo;
         private string $password;
         private $registrationDate;
-        private string $role;
+        private  $role;
         
 
 
@@ -81,22 +81,20 @@
         /**
          * Get the value of registrationDate
          */ 
-        public function getRegistrationDate()
-        {
-                return $this->registrationDate;
-        }
+        public function getRegistrationdate(){
+                $formattedDate = $this->registrationdate->format("d/m/Y, H:i:s");
+                return $formattedDate;
+            }
 
         /**
          * Set the value of registrationDate
          *
          * @return  self
          */ 
-        public function setRegistrationDate($registrationDate)
-        {
-                $this->registrationDate = $registrationDate;
-
+        public function setRegistrationdate($date){
+                $this->registrationdate = new \DateTime($date);
                 return $this;
-        }
+            }
 
         /**
          * Get the value of role
@@ -106,6 +104,7 @@
                 return $this->role;
         }
 
+
         /**
          * Set the value of role
          *
@@ -113,9 +112,15 @@
          */ 
         public function setRole($role)
         {
-                $this->role = $role;
-
+                $role = json_decode($role);
+                if (empty($role)) {
+                        return $this->role[] = $role;
+                }
                 return $this;
+        }
+
+        public function hasRole($role) {
+                return in_array($role, ["ROLE_ADMIN","ROLE_USER"], true);
         }
         public function __toString()
         {return "testa";} 
